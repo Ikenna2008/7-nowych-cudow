@@ -10,37 +10,19 @@
   <header>
     <h1>7 nowych cudów świata</h1>
   </header>
+
   <nav>
     <a href="#">Strona główna</a>
     <a href="#galeria">Galeria</a>
     <a href="#ankieta">Ankieta</a>
   </nav>
+
   <div class="layout">
-    <main>
-      <p>Nazwa Siedem Cudów Świata odnosi się do najbardziej znanych miejsc turystycznych wyłonionych w globalnym głosowaniu organizowanym przez New Open World Corporation.</p>
-      <ul>
-        <li>Akropol ateński</li>
-        <li>Moai</li>
-        <li>Wieża Eiffla</li>
-        <li>Stonehenge</li>
-      </ul>
-      <table>
-        <thead>
-          <tr><th>Obiekt</th><th>Lokalizacja</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Wielki Mur Chiński</td><td>Chiny</td></tr>
-          <tr><td>Petra</td><td>Jordania</td></tr>
-          <tr><td>Statua Chrystusa Odkupiciela</td><td>Brazylia</td></tr>
-          <tr><td>Machu Picchu</td><td>Peru</td></tr>
-          <tr><td>Chichén Itzá</td><td>Meksyk</td></tr>
-          <tr><td>Kolosseum</td><td>Włochy</td></tr>
-          <tr><td>Tadź Mahal</td><td>Indie</td></tr>
-        </tbody>
-      </table>
-      <section class="gallery" id="galeria">
+    <aside class="left-column">
+
+      <aside class="gallery" id="galeria">
         <h2>Galeria</h2>
-        <figure>
+        <figure class="slider">
           <img src="img/china.jpg" alt="Wielki Mur Chiński">
           <img src="img/petra.jpg" alt="Petra">
           <img src="img/christ1.jpg" alt="Statua Chrystusa Zbawiciela">
@@ -49,27 +31,82 @@
           <img src="img/koloseum.jpg" alt="Koloseum">
           <img src="img/taj.jpg" alt="Tadź Mahal">
         </figure>
-      </section>
-    </main>
-    <aside id="ankieta">
-      <form>
-        <p>Czy odwiedziłeś kiedyś jakiś cud świata?</p>
-        <label><input type="radio" name="kiedys"> Tak</label><br>
-        <label><input type="radio" name="kiedys"> Nie</label>
-        <p>Jeśli tak, to które?</p>
-        <label><input type="checkbox"> Wielki Mur Chiński</label><br>
-        <label><input type="checkbox"> Petra</label><br>
-        <label><input type="checkbox"> Statua Chrystusa</label><br>
-        <label><input type="checkbox"> Machu Picchu</label><br>
-        <label><input type="checkbox"> Chichén Itzá</label><br>
-        <label><input type="checkbox"> Koloseum</label><br>
-        <label><input type="checkbox"> Tadź Mahal</label>
-        <p>Twoja opinia</p>
-        <input type="text">
-        <input type="submit" value="Wyślij">
-        <input type="reset" value="Wyczyść">
-      </form>
+      </aside>
+            <div class="video-container">
+        <h2>Film o cudach świata</h2>
+        <video controls>
+          <source src="img/wonders.mp4" type="video/mp4">
+        </video>
+      </div>
     </aside>
+
+    <div class="right-column">
+      <main>
+        <p>Nazwa Siedem Cudów Świata odnosi się generalnie do najbardziej popularnych miejsc turystycznych. Jest dużo różnych list z różnymi "cudami świata", ale tutaj odnoszę się do listy skomponowanej przez organizacje "New Open World Corporation" (NOWC), gdzie ludzie mogli głosować na cudy świata online lub telefonicznie.</p>
+
+        <p>Projekt ten został zapoczątkowany przez podróżnika Bernarda Webera, a do 24 listopada 2005 roku było w projekcie 177 obiektów, które spełniały kryterium ukończenia budowy przed 2000 rokiem. Pierwszego stycznia 2006 NOWC ogłosiło listę 21 finalistów, lecz później została skrócona do 20, przez wycofanie Piramid w Gizie, które zostały honorowymi cudami świata. W liście finalistów był np.</p>
+
+        <ul>
+          <li>Akropol ateński</li>
+          <li>Moai</li>
+          <li>Wieża Eiffla</li>
+          <li>Stonehenge</li>
+        </ul>
+
+        <table>
+          <thead>
+            <tr><th>Obiekt</th><th>Lokalizacja</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Wielki Mur Chiński</td><td>Chiny</td></tr>
+            <tr><td>Petra</td><td>Jordania</td></tr>
+            <tr><td>Statua Chrystusa Odkupiciela</td><td>Brazylia</td></tr>
+            <tr><td>Machu Picchu</td><td>Peru</td></tr>
+            <tr><td>Chichén Itzá</td><td>Meksyk</td></tr>
+            <tr><td>Koloseum</td><td>Włochy</td></tr>
+            <tr><td>Tadź Mahal</td><td>Indie</td></tr>
+          </tbody>
+        </table>
+      </main>
+
+      <aside id="ankieta">
+        <h2>Twoja opinia się liczy!</h2>
+        <p>Podziel się doświadczeniem z odwiedzania cudów świata.</p>
+        <form>
+          <p>Czy odwiedziłeś kiedyś jakiś cud świata?</p>
+          <label><input type="radio" name="kiedys"> Tak</label><br>
+          <label><input type="radio" name="kiedys"> Nie</label>
+
+          <p>Jeśli tak, to które?</p>
+          <label><input type="checkbox"> Wielki Mur Chiński</label><br>
+          <label><input type="checkbox"> Petra</label><br>
+          <label><input type="checkbox"> Statua Chrystusa</label><br>
+          <label><input type="checkbox"> Machu Picchu</label><br>
+          <label><input type="checkbox"> Chichén Itzá</label><br>
+          <label><input type="checkbox"> Koloseum</label><br>
+          <label><input type="checkbox"> Tadź Mahal</label>
+
+          <p>Twoja opinia</p>
+          <input type="text">
+          <input type="submit" value="Wyślij">
+          <input type="reset" value="Wyczyść">
+        </form>
+      </aside>
+    </div>
+
+    <div style="clear:both;"></div>
   </div>
+
+  <div class="mini-gallery">
+    <h2>Mini Galeria</h2>
+    <a href="mur.html"><img src="img/china-small.jpg" alt="Wielki Mur Chiński"></a>
+    <a href="petra.html"><img src="img/petra-small.jpg" alt="Petra"></a>
+    <a href="christ.html"><img src="img/christ1-small.jpg" alt="Statua Chrystusa"></a>
+    <a href="machu.html"><img src="img/machu-small.jpg" alt="Machu Picchu"></a>
+    <a href="itza.html"><img src="img/itza-small.jpg" alt="Chichén Itzá"></a>
+    <a href="koloseum.html"><img src="img/koloseum-small.jpg" alt="Koloseum"></a>
+    <a href="taj.html"><img src="img/taj-small.jpg" alt="Tadź Mahal"></a>
+  </div>
+  <footer>Strona wykonana przez: Filip Nwakor</footer>
 </body>
 </html>

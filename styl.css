@@ -230,6 +230,15 @@ input[type=reset]:hover {
     margin: 0 0 20px 0;
   }
   .mini-gallery {
+    display: block;
+    text-align: center;
+  }
+
+  .mini-gallery img {
+    width: 80px;
+    height: 55px;
+  }
+  .video-container {
     display: none;
   }
   nav.desktop-menu, nav.tablet-menu {

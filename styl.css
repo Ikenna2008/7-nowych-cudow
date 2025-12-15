@@ -1,10 +1,11 @@
-/* --- OGÓLNE --- */
+/* --- RESET --- */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* --- OGÓLNE --- */
 body {
   font-family: Arial, sans-serif;
   background: #FABB82;
@@ -21,6 +22,7 @@ header, footer {
   border-radius: 0 0 10px 10px;
 }
 
+/* --- TYTUŁ --- */
 h1 {
   font-size: 32px;
   animation: titleWave 4s ease-in-out infinite;
@@ -31,11 +33,11 @@ h1 {
 }
 
 @keyframes titleWave {
-  0%   { transform: scale(1) rotate(0deg); background-position: 0% 50%; }
-  25%  { transform: scale(1.05) rotate(-1deg); background-position: 50% 50%; }
-  50%  { transform: scale(1) rotate(0deg); background-position: 100% 50%; }
-  75%  { transform: scale(1.05) rotate(1deg); background-position: 50% 50%; }
-  100% { transform: scale(1) rotate(0deg); background-position: 0% 50%; }
+  0% { transform: scale(1); }
+  25% { transform: scale(1.05) rotate(-1deg); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.05) rotate(1deg); }
+  100% { transform: scale(1); }
 }
 
 /* --- MENU --- */
@@ -48,8 +50,9 @@ nav.desktop-menu {
 
 nav.desktop-menu a {
   color: #fff;
-  margin: 0 12px;
+  text-decoration: none;
   font-weight: bold;
+  margin: 0 12px;
 }
 
 nav.tablet-menu {
@@ -61,6 +64,7 @@ nav.tablet-menu {
 
 nav.tablet-menu a {
   color: #222;
+  text-decoration: none;
   font-weight: bold;
 }
 
@@ -68,17 +72,17 @@ nav.mobile-menu {
   display: none;
   flex-direction: column;
   background: #27ae60;
-  padding: 8px 0;
 }
 
 nav.mobile-menu a {
   color: #fff;
-  padding: 8px 0;
+  text-decoration: none;
+  padding: 10px;
   text-align: center;
   border-bottom: 1px solid #fff;
 }
 
-/* --- KOLUMNY --- */
+/* --- UKŁAD STRONY GŁÓWNEJ --- */
 .left-column {
   width: 320px;
   float: left;
@@ -89,8 +93,12 @@ nav.mobile-menu a {
   margin-left: 340px;
 }
 
-/* BLOKI */
-.video-container, .gallery, main, #ankieta, .mini-gallery {
+/* --- BLOKI --- */
+.video-container,
+.gallery,
+main,
+#ankieta,
+.mini-gallery {
   background: #F78B6A;
   padding: 16px;
   border-radius: 10px;
@@ -103,14 +111,12 @@ nav.mobile-menu a {
   border-radius: 10px;
 }
 
-/* SLIDER */
+/* --- SLIDER --- */
 .slider {
   position: relative;
   width: 100%;
   height: 300px;
   overflow: hidden;
-  border-radius: 10px;
-  margin: 0 auto;
 }
 
 .slider img {
@@ -121,7 +127,6 @@ nav.mobile-menu a {
   object-fit: contain;
   opacity: 0;
   animation: fade 21s infinite;
-  border-radius: 10px;
 }
 
 .slider img:nth-child(1) { animation-delay: 0s; }
@@ -140,7 +145,7 @@ nav.mobile-menu a {
   100% { opacity: 0; }
 }
 
-/* MINI GALERIA */
+/* --- MINI GALERIA (STRONA GŁÓWNA) --- */
 .mini-gallery a {
   display: inline-block;
   margin: 4px;
@@ -151,7 +156,6 @@ nav.mobile-menu a {
   height: 70px;
   object-fit: cover;
   border-radius: 5px;
-  cursor: pointer;
   transition: transform 0.2s;
 }
 
@@ -159,7 +163,7 @@ nav.mobile-menu a {
   transform: scale(1.1);
 }
 
-/* FORMULARZE */
+/* --- LISTY / TABELA / FORMULARZ --- */
 ul {
   margin: 16px 0 16px 32px;
 }
@@ -168,9 +172,6 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 24px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  border-radius: 10px;
-  overflow: hidden;
 }
 
 th, td {
@@ -191,18 +192,15 @@ form p {
 input[type=text] {
   width: 100%;
   padding: 8px;
-  margin: 8px 0 16px 0;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  margin: 8px 0 16px;
 }
 
-input[type=submit], input[type=reset] {
+input[type=submit],
+input[type=reset] {
   padding: 8px 16px;
   border: none;
   margin-top: 8px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: transform 0.2s;
 }
 
 input[type=submit] {
@@ -215,73 +213,121 @@ input[type=reset] {
   color: #fff;
 }
 
-input[type=submit]:hover,
-input[type=reset]:hover {
-  transform: scale(1.05);
+/* ================================================= */
+/* ===== DODATKI POD PODSTRONY (BEZPIECZNE) ===== */
+/* ================================================= */
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+/* ZDJĘCIE */
+.image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* MAPA */
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 20px 0;
+}
+
+.map-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* MINI GALERIA NA PODSTRONACH */
+main .mini-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+main .mini-gallery img {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 /* --- RESPONSYWNOŚĆ --- */
 
-/* TELEFON <600px */
+/* TELEFON */
 @media (max-width: 599px) {
-  .left-column, .right-column {
+  .left-column,
+  .right-column {
     width: 100%;
     float: none;
     margin: 0 0 20px 0;
   }
+
   .mini-gallery {
-    display: block;
-    text-align: center;
+    display: none;
   }
 
-  .mini-gallery img {
-    width: 80px;
-    height: 55px;
-  }
-  .video-container {
+  nav.desktop-menu,
+  nav.tablet-menu {
     display: none;
   }
-  nav.desktop-menu, nav.tablet-menu {
-    display: none;
-  }
+
   nav.mobile-menu {
     display: flex;
   }
+
+  main {
+    padding: 0 10px;
+  }
+
+  main .mini-gallery img {
+    width: 70px;
+    height: 50px;
+  }
 }
 
-/* TABLET 600-1199px */
+/* TABLET */
 @media (min-width: 600px) and (max-width: 1199px) {
-  .left-column {
-    width: 100%;
-    float: none;
-    margin-bottom: 20px;
-  }
+  .left-column,
   .right-column {
     width: 100%;
     float: none;
     margin-left: 0;
   }
-  nav.desktop-menu, nav.mobile-menu {
+
+  nav.desktop-menu,
+  nav.mobile-menu {
     display: none;
   }
+
   nav.tablet-menu {
     display: flex;
   }
 }
 
-/* KOMPUTER >1200px */
+/* KOMPUTER */
 @media (min-width: 1200px) {
-  .left-column {
-    width: 320px;
-    float: left;
-    margin-right: 20px;
-  }
-  .right-column {
-    margin-left: 340px;
-  }
-  nav.tablet-menu, nav.mobile-menu {
+  nav.tablet-menu,
+  nav.mobile-menu {
     display: none;
   }
+
   nav.desktop-menu {
     display: flex;
   }
